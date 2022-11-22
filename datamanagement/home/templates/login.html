@@ -1,0 +1,12 @@
+<h1>Login</h1>
+
+<form action="check_auth/" method="post">
+{% csrf_token %}
+username:<br>
+<input name="username">
+<br><br>
+password:<br>
+<input name="password">
+<br><br>
+<input type="submit" value="login">
+</form>

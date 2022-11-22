@@ -1,0 +1,16 @@
+<h1>Users</h1>
+
+<table border="1">
+{% for x in users %}
+<tr>
+<td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+<td>{{ x.username }}</td>
+<td>{{ x.role }}</td>
+<td><a href="delete/{{ x.id }}">delete</a></td>
+</tr>
+{% endfor %}
+</table>
+
+<p>
+<a href="add/">Add member</a>
+</p>
