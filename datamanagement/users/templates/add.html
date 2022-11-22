@@ -1,0 +1,23 @@
+<h1>Add member</h1>
+
+{% include 'messages.html' %}
+<form action="addrecord/" method="post">
+{% csrf_token %}
+username:<br>
+<input name="username">
+<br><br>
+password:<br>
+<input name="password">
+<br><br>
+role:<br>
+<input name="role">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+<script>
+    setTimeout(function () {
+        if ($('#msg').length > 0){
+            $('#msg').remove();
+        }
+    },2000)
+</script>
