@@ -5,7 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="644029c1-2736-4fd2-a40d-af5433027e9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c3781543-1c90-4763-a0ec-56b541856460.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c3781543-1c90-4763-a0ec-56b541856460.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datamanagement/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/datamanagement/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,25 +49,28 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HrmgdvavgrNcZ9ED6rSxTcafF4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/66634/BossDjango/datamanagement",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/66634/BossDjango/datamanagement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="datamanagement" />
@@ -94,11 +127,27 @@
       <option name="presentableId" value="Default" />
       <updated>1669051689040</updated>
       <workItem from="1669051690225" duration="3779000" />
-      <workItem from="1669083411742" duration="354000" />
+      <workItem from="1669083411742" duration="1102000" />
+      <workItem from="1669122092254" duration="2115000" />
+      <workItem from="1669307102213" duration="1831000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
