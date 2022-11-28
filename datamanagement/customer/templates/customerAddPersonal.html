@@ -1,0 +1,25 @@
+<h1>Add Personal Customer</h1>
+
+{% include 'messages.html' %}
+<form action="add_customerP/" method="post">
+{% csrf_token %}
+firstname:<br>
+<input name="firstname">
+<br><br>
+surname:<br>
+<input name="surname">
+<br><br>
+nickname:<br>
+<input name="nickname">
+<br><br>
+email:<br>
+<input name="email">
+<br><br>
+tel:<br>
+<input name="tel">
+<br><br>
+address:<br>
+<input name="address">
+<br><br>
+ <input type="submit" value="Submit">
+</form>

@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class CustomersPer(models.Model):
-    name = models.CharField(max_length=255)
+    firstname = models.CharField(max_length=255)
     surname = models.CharField(max_length=255)
     nickname = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
@@ -20,7 +20,13 @@ class CustomersOrg(models.Model):
     address = models.CharField(max_length=255)
 
 
-class Document(models.Model):
+class DocumentOrg(models.Model):
+    CustomersOrg = models.ForeignKey(CustomersOrg, on_delete=models.CASCADE)
     doc_name = models.CharField(max_length=255)
-    doc_id = models.CharField(max_length=255)
+    path = models.CharField(max_length=255)
+
+
+class DocumentPer(models.Model):
+    CustomersPer = models.ForeignKey(CustomersPer, on_delete=models.CASCADE)
+    doc_name = models.CharField(max_length=255)
     path = models.CharField(max_length=255)

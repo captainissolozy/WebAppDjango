@@ -1,0 +1,25 @@
+<h1>Add Organization Customer</h1>
+
+{% include 'messages.html' %}
+<form action="add_customerO/" method="post">
+{% csrf_token %}
+name:<br>
+<input name="name">
+<br><br>
+taxpayer_num:<br>
+<input name="taxpayer_num">
+<br><br>
+registered_capital:<br>
+<input name="registered_capital">
+<br><br>
+email:<br>
+<input name="email">
+<br><br>
+tel:<br>
+<input name="tel">
+<br><br>
+address:<br>
+<input name="address">
+<br><br>
+ <input type="submit" value="Submit" name="addPer">
+</form>

@@ -20,7 +20,13 @@ class SuppliersOrg(models.Model):
     address = models.CharField(max_length=255)
 
 
-class Document(models.Model):
+class DocumentOrg(models.Model):
+    SuppliersOrg = models.ForeignKey(SuppliersOrg, on_delete=models.CASCADE)
     doc_name = models.CharField(max_length=255)
-    doc_id = models.CharField(max_length=255)
+    path = models.CharField(max_length=255)
+
+
+class DocumentPer(models.Model):
+    SuppliersPer = models.ForeignKey(SuppliersPer, on_delete=models.CASCADE)
+    doc_name = models.CharField(max_length=255)
     path = models.CharField(max_length=255)
