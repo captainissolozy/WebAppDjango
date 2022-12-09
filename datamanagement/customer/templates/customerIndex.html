@@ -6,12 +6,9 @@
 {% for x in customer_p|slice:":5" %}
 <tr>
 <td><a href="update/{{ x.id }}">edit</a></td>
-<td>{{ x.firstname }}</td>
-<td>{{ x.surname }}</td>
     <td>{{ x.nickname }}</td>
     <td>{{ x.email }}</td>
     <td>{{ x.tel }}</td>
-    <td>{{ x.address }}</td>
 <td><a href="delete/{{ x.id }}">delete</a></td>
 </tr>
 {% endfor %}
@@ -25,10 +22,6 @@
 <td><a href="update/{{ x.id }}">edit</a></td>
 <td>{{ x.name }}</td>
 <td>{{ x.taxpayer_num }}</td>
-    <td>{{ x.registered_capital }}</td>
-    <td>{{ x.email }}</td>
-    <td>{{ x.tel }}</td>
-    <td>{{ x.address }}</td>
 <td><a href="delete/{{ x.id }}">delete</a></td>
 </tr>
 {% endfor %}
