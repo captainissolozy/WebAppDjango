@@ -21,12 +21,12 @@ class SuppliersOrg(models.Model):
 
 
 class DocumentOrg(models.Model):
-    SuppliersOrg = models.ForeignKey(SuppliersOrg, on_delete=models.CASCADE)
+    owner = models.CharField(max_length=255)
     doc_name = models.CharField(max_length=255)
-    path = models.CharField(max_length=255)
+    path = models.ImageField(upload_to='images/')
 
 
 class DocumentPer(models.Model):
-    SuppliersPer = models.ForeignKey(SuppliersPer, on_delete=models.CASCADE)
+    owner = models.CharField(max_length=255)
     doc_name = models.CharField(max_length=255)
-    path = models.CharField(max_length=255)
+    path = models.ImageField(upload_to='images/')

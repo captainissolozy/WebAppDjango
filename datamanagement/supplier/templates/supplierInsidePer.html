@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+</head>
+<h2>Type: Personal</h2>
+<p>ชื่อเล่น : {{ supplier_p.nickname }}</p>
+<p>ชื่อ - นามสกุล : {{ supplier_p.firstname }} {{ supplier_p.surname }}</p>
+<p>ที่อยู่ : {{ supplier_p.address }}</p>
+<p>เบอร์โทรติดต่อ : {{ supplier_p.tel }}</p>
+<p>อีเมลล์ : {{ supplier_p.email }}</p>
+
+<form method = "post" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+<button type="submit">Upload</button>
+</form>

@@ -3,18 +3,65 @@ from django.shortcuts import render
 from django.template import loader
 from django.urls import reverse
 from django.contrib import messages
+
+from .forms import SupplierForm
 from .models import SuppliersOrg, SuppliersPer, DocumentOrg, DocumentPer
 
 
 def index(request):
     supplier_p = SuppliersPer.objects.all().values()
     supplier_o = SuppliersOrg.objects.all().values()
+    doc_org = DocumentOrg.objects.all().values()
+    doc_per = DocumentPer.objects.all().values()
     template = loader.get_template('supplierIndex.html')
     context = {
         'supplier_p': supplier_p,
         'supplier_o': supplier_o,
+        'doc_org': doc_org,
+        'doc_per': doc_per
     }
     return HttpResponse(template.render(context, request))
+
+
+def inside_org(request, id):
+    supplier_o = SuppliersOrg.objects.get(id=id)
+    doc_org = DocumentOrg.objects.all().values()
+    template = loader.get_template('supplierInside.html')
+    context = {
+        'supplier_o': supplier_o,
+        'doc_org': doc_org,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def inside_per(request, id):
+    supplier_p = SuppliersPer.objects.get(id=id)
+    doc_per = DocumentPer.objects.all().values()
+    template = loader.get_template('supplierInsidePer.html')
+    if request.method == 'POST':
+        form = SupplierForm(request.POST, request.FILES)
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.owner = supplier_p.email
+            form.save()
+    else:
+        form = SupplierForm()
+    context = {
+        'supplier_p': supplier_p,
+        'doc_per': doc_per,
+        'form': form,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def add_dp(request):
+    if request.method == 'POST':
+        form = SupplierForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    else:
+        form = SupplierForm()
+    return render(request, "test.html", {'form': form})
 
 
 def add_sp(request):
