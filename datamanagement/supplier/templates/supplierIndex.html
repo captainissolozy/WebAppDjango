@@ -1,34 +1,176 @@
-<h1>Supplier</h1>
+<!DOCTYPE html>
+<html lang="en_us">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Supplier</title>
+</head>
+<body>
+    <!-- nav bar -->
+    <nav class="navbar sticky-top navbar-expand-lg ">
+        <div class="container-fluid d-flex justify-content-between mb-5 " style="background-color: #D590FF;">
+            <a class="navbar-brand text-dark fs-4 fw-bold" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/2015/2015058.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+                Name Website :
+            </a>
+            <div class="nav-item dropdown" >
+                <i class="bi bi-list nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style='font-size:40px;color: black;'></i>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #FFC9F7;">
+                    <li><a class="dropdown-item" href="#">Login</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Supplier</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Customer</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<h2>Personal</h2>
-<p>
-<a href="add_sp/">Add Personal Supplier</a>
-</p>
-<table border="1">
-{% for x in supplier_p|slice:":5" %}
-<tr>
-<td><a href="inside_per/{{ x.id }}">edit</a></td>
-    <td>{{ x.nickname }}</td>
-    <td>{{ x.email }}</td>
-    <td>{{ x.tel }}</td>
-<td><a href="delete/{{ x.id }}">delete</a></td>
-</tr>
-{% endfor %}
-</table>
+    <div class="container mt-3">
+    <!-- code supplier บุคคล -->
+        <div class="d-flex justify-content-start">
+            <div class="col-5">
+                <h2>Supplier : บุคคล</h2>
+            </div>
+            <div class="col-7 align-self-start">
+                <a href="add_sp/">
+                    <i class="bi bi-plus-circle-fill " style='font-size:32px; color: black;'></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- card supplier บุคคล-->
+        <div class="card text-dark  shadow p-3 mb-5  rounded mt-4" style="background-color: #f8f9fa;">
+          <div class="card-body " >
+            <div class="row px-4 py-4">
+                <div class="col-6">
+                    <input type="text" class="form-control mb-4 " placeholder="ชื่อ" style="background-color: #dee2e6;">
+                    <input type="text" class="form-control" placeholder="ชื่อเล่น" style="background-color: #dee2e6;">
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input type="text" class="form-control mb-3" placeholder="นามสกุล" style="background-color: #dee2e6;">
+                    <button class="btn btn-info fw-bold" type="button">Search</button>
+                </div>
+            </div>
 
+            <div class="table-responsive px-4 py-4">
+                <table class="table table-bordered table-hover text-break">
+                    <thead>
+                        <tr class="text-center">
+                          <th>ชื่อเล่น</th>
+                          <th>เบอร์โทร</th>
+                          <th>เอกสาร</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="col-3">Apple</td>
+                          <td class="col-3">0994836321</td>
+                          <td class="col-3">pk.ap099@gmail.com</td>
+                          <td class="col-1 px-4">
+                            <a href="">
+                                <i class="bi bi-pencil-square " style='font-size:20px; color: black;'></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-trash-fill" style='font-size:20px; color: black;'></i>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="col-3">Captain</td>
+                          <td class="col-3">0998989898</td>
+                          <td class="col-3">captain_kanin@gmail.com</td>
+                          <td class="col-1 px-4">
+                            <a href="">
+                                <i class="bi bi-pencil-square " style='font-size:20px; color: black;'></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-trash-fill " style='font-size:20px; color: black;'></i>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                </table>
+              </div>
+            
+          </div>
+        </div>
 
-<h2>Organization</h2>
-<p>
-<a href="add_so/">Add Organization Supplier</a>
-</p>
-<table border="1">
-{% for x in supplier_o|slice:":5" %}
-<tr>
-<td><a href="inside_org/{{ x.id }}">edit</a></td>
-<td>{{ x.name }}</td>
-<td>{{ x.taxpayer_num }}</td>
-<td><a href="delete/{{ x.id }}">delete</a></td>
-</tr>
-{% endfor %}
-</table>
+    <!-- code supplier บริษัท -->
+        <div class="d-flex justify-content-start pt-5">
+            <div class="col-5">
+                <h2>Supplier : บริษัท</h2>
+            </div>
+            <div class="col-7 ">
+                <a href="add_so/">
+                    <i class="bi bi-plus-circle-fill" style='font-size:32px; color: black;'></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- card supplier บริษัท-->
+        <div class="card text-dark  shadow p-3 mb-5  rounded mt-4" style="background-color: #f8f9fa;">
+        <div class="card-body " >
+            <div class="row px-4 py-4">
+                <div class="col-6">
+                    <input type="text" class="form-control " placeholder="ชื่อ" style="background-color: #dee2e6;">
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-info fw-bold" type="button">Search</button>
+                </div>
+            </div>
+
+            <div class="table-responsive px-4 py-4">
+                <table class="table table-bordered table-hover text-break text-wrap ">
+                    <thead>
+                        <tr class="text-center">
+                        <th>ชื่อบริษัท</th>
+                        <th>เอกสาร</th>
+                        <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td class="col-5">Apple</td>
+                        <td class="col-5">pk.ap099@gmail.com</td>
+                        <td class="col-1 px-3">
+                            <a href="">
+                                <i class="bi bi-pencil-square " style='font-size:20px; color: black;'></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-trash-fill" style='font-size:20px; color: black;'></i>
+                            </a>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td class="col-5">Captain</td>
+                        <td class="col-5">captain_kanin@gmail.com</td>
+                        <td class="col-1 px-3">
+                            <a href="">
+                                <i class="bi bi-pencil-square " style='font-size:20px; color: black;'></i>
+                            </a>
+                            <a href="">
+                                <i class="bi bi-trash-fill" style='font-size:20px; color: black;'></i>
+                            </a>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>
 

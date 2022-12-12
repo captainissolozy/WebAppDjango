@@ -1,25 +1,80 @@
-<h1>Add Personal Supplier</h1>
+<!DOCTYPE html>
+<html lang="en_us">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Add Personal Supplier</title>
+</head>
+<body>
+    <!-- nav bar -->
+    <nav class="navbar sticky-top navbar-expand-lg ">
+        <div class="container-fluid d-flex justify-content-between mb-5 " style="background-color: #D590FF;">
+            <a class="navbar-brand text-dark fs-4 fw-bold" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/2015/2015058.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+                Name Website :
+            </a>
+            <div class="nav-item dropdown" >
+                <i class="bi bi-list nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style='font-size:40px;color: black;'></i>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #FFC9F7;">
+                    <li><a class="dropdown-item" href="#">Login</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Supplier</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Customer</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-{% include 'messages.html' %}
-<form action="add_supplierP/" method="post">
-{% csrf_token %}
-firstname:<br>
-<input name="firstname">
-<br><br>
-surname:<br>
-<input name="surname">
-<br><br>
-nickname:<br>
-<input name="nickname">
-<br><br>
-email:<br>
-<input name="email">
-<br><br>
-tel:<br>
-<input name="tel">
-<br><br>
-address:<br>
-<input name="address">
-<br><br>
- <input type="submit" value="Submit">
-</form>
+    <div class="container mt-3">
+        <!-- code supplier บุคคล -->
+            <div class="d-flex justify-content-start">
+                <div class="col-5">
+                    <h2>Supplier : บุคคล</h2>
+                </div>
+            </div>
+            <!-- card supplier บุคคล-->
+            <div class="card text-dark  shadow p-3 mb-5  rounded mt-4" style="background-color: #f8f9fa;">
+                <div class="card-body " >
+                    <div class="row px-4 py-4">
+                        <div class="col-6">
+                            <label class="form-label">nickname</label>
+                            <input type="text" class="form-control mb-4 " placeholder="" style="background-color: #dee2e6;">
+                            <label class="form-label">name</label>
+                            <input type="text" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+                            <label class="form-label">tell</label>
+                            <input type="number" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+                            
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">email</label>
+                            <input type="text" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+                            <label class="form-label">surname</label>
+                            <input type="text" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+                        </div>
+                        <div class="col">
+                            <label class="form-label">address</label>
+                            <textarea class="form-control mb-4" id="txt_area" rows="3" style="background-color: #dee2e6;"></textarea>
+                        </div>
+                        <!-- ปุ่มแบบเต็ม -->
+                        <div class="row justify-content-end col-12 mx-auto mt-4">
+                                <button class="btn btn-info fw-bold" type="button">Add</button>
+                        </div>
+                    <!-- ปุ่มแบบชิดขวา -->
+                        <!-- <div class="row justify-content-end mt-4  d-grid gap-2">
+                            <button class="btn btn-info fw-bold" type="button">Add</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+
+</body>
+</html>
