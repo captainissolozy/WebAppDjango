@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.template import loader
 from django.urls import reverse
 from django.contrib import messages
+
+from .forms import CustomerForm
 from .models import CustomersOrg, CustomersPer, DocumentOrg, DocumentPer
 
 
@@ -25,6 +27,54 @@ def add_cp(request):
 def add_co(request):
     template = loader.get_template('customerAddOrg.html')
     return HttpResponse(template.render({}, request))
+
+
+def inside_org(request, name):
+    customer_o = CustomersOrg.objects.get(name=name)
+    doc_per = []
+    if DocumentPer.objects.filter(owner=name).exists():
+        doc_per = DocumentPer.objects.filter(owner=name)
+    template = loader.get_template('customerInside.html')
+    if request.method == 'POST':
+        form = CustomerForm(request.POST, request.FILES)
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.owner = customer_o.name
+            form.save()
+            doc_per = DocumentPer.objects.filter(owner=name)
+    else:
+        form = CustomerForm()
+    context = {
+        'customer_o': customer_o,
+        'doc_per': doc_per,
+        'form': form,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+
+def inside_per(request, email):
+    customer_p = CustomersPer.objects.get(email=email)
+    doc_per = []
+    if DocumentPer.objects.filter(owner=email).exists():
+        doc_per = DocumentPer.objects.filter(owner=email)
+    template = loader.get_template('customerInsidePer.html')
+    if request.method == 'POST':
+        form = CustomerForm(request.POST, request.FILES)
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.owner = customer_p.email
+            form.save()
+            doc_per = DocumentPer.objects.filter(owner=email)
+    else:
+        form = CustomerForm()
+    context = {
+        'customer_p': customer_p,
+        'doc_per': doc_per,
+        'form': form,
+    }
+    return HttpResponse(template.render(context, request))
+
 
 
 def add_customerO(request):

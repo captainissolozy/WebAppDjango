@@ -5,7 +5,7 @@
 <table border="1">
 {% for x in customer_p|slice:":5" %}
 <tr>
-<td><a href="update/{{ x.id }}">edit</a></td>
+<td><a href="inside_per/{{ x.email }}">edit</a></td>
     <td>{{ x.nickname }}</td>
     <td>{{ x.email }}</td>
     <td>{{ x.tel }}</td>
@@ -19,7 +19,7 @@
 <table border="1">
 {% for x in customer_o|slice:":5" %}
 <tr>
-<td><a href="update/{{ x.id }}">edit</a></td>
+<td><a href="inside_org/{{ x.name }}">edit</a></td>
 <td>{{ x.name }}</td>
 <td>{{ x.taxpayer_num }}</td>
 <td><a href="delete/{{ x.id }}">delete</a></td>

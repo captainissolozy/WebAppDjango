@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+</head>
+<h2>Type: Organization</h2>
+<p>ชื่อบริษัท : {{ supplier_o.name }}</p>
+<p>เลขผู้เสียภาษี : {{ supplier_o.taxpayer_num }} {{ supplier_p.surname }}</p>
+<p>ทุนจดทะเบียน : {{ supplier_o.registered_capital }}</p>
+<p>เบอร์โทรติดต่อ : {{ supplier_o.tel }}</p>
+<p>อีเมลล์ : {{ supplier_o.email }}</p>
+<p>address : {{ supplier_o.address }}</p>
+<br>
+{% for x in doc_per %}
+<tr>
+<td></td>
+    <br>
+    <td>{{ x.doc_name }}</td>
+    <td><img src="/media/{{ x.path }}" alt="connect" style="max-height:150px"></td><br>
+<td></td>
+</tr>
+{% endfor %}
+<br>
+<form method = "post" enctype="multipart/form-data" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+<button type="submit">Upload</button>
+</form>

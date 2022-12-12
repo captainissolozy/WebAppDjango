@@ -10,4 +10,6 @@ urlpatterns = [
     path('add_cp/', views.add_cp, name='add_cp'),
     path('add_co/add_customerO/', views.add_customerO, name='add_add_co'),
     path('add_cp/add_customerP/', views.add_customerP, name='add_add_cp'),
+    path('inside_per/<str:email>', views.inside_per, name='inside_p'),
+    path('inside_org/<str:name>', views.inside_org, name='inside_o'),
 ]

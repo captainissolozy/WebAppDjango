@@ -5,16 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="644029c1-2736-4fd2-a40d-af5433027e9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/supplier/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supplier/migrations/0004_remove_documentorg_suppliersorg_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supplier/migrations/0005_alter_documentorg_path_alter_documentper_path.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supplier/templates/supplierInsidePer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/supplier/templates/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/migrations/0004_remove_documentper_customersper_documentper_owner_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/templates/customerInsidePer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/Normal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/OpenCV.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/grayimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/grayimage_jToFfq4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/image2D.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/rgbimage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/rgbimage_9GUSE3b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/rgbimage_DKVoEO7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/supplier/migrations/0006_alter_documentorg_path_alter_documentper_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/datamanagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/datamanagement.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datamanagement/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/datamanagement/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datamanagement/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/datamanagement/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/templates/customerIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customerIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/templates/customerInside.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customerInside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier/templates/supplierIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier/templates/supplierInside.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierInside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier/templates/supplierInsidePer.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierInsidePer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/views.py" afterDir="false" />
     </list>
@@ -37,21 +51,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/66634/BossDjango/datamanagement&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/66634/BossDjango/datamanagement/customer/templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\66634\BossDjango\datamanagement\customer\templates" />
+      <recent name="C:\Users\66634\BossDjango\datamanagement\customer" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="datamanagement" />
@@ -115,6 +135,7 @@
       <workItem from="1670489248506" duration="7402000" />
       <workItem from="1670554791545" duration="719000" />
       <workItem from="1670733448839" duration="17912000" />
+      <workItem from="1670820793501" duration="9070000" />
     </task>
     <servers />
   </component>

@@ -23,20 +23,35 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 
-def inside_org(request, id):
-    supplier_o = SuppliersOrg.objects.get(id=id)
-    doc_org = DocumentOrg.objects.all().values()
+def inside_org(request, name):
+    supplier_o = SuppliersOrg.objects.get(name=name)
+    doc_per = []
+    if DocumentPer.objects.filter(owner=name).exists():
+        doc_per = DocumentPer.objects.filter(owner=name)
     template = loader.get_template('supplierInside.html')
+    if request.method == 'POST':
+        form = SupplierForm(request.POST, request.FILES)
+        if form.is_valid():
+            obj = form.save(commit=False)
+            obj.owner = supplier_o.name
+            form.save()
+            doc_per = DocumentPer.objects.filter(owner=name)
+    else:
+        form = SupplierForm()
     context = {
         'supplier_o': supplier_o,
-        'doc_org': doc_org,
+        'doc_per': doc_per,
+        'form': form,
     }
     return HttpResponse(template.render(context, request))
 
 
-def inside_per(request, id):
-    supplier_p = SuppliersPer.objects.get(id=id)
-    doc_per = DocumentPer.objects.all().values()
+
+def inside_per(request, email):
+    supplier_p = SuppliersPer.objects.get(email=email)
+    doc_per = []
+    if DocumentPer.objects.filter(owner=email).exists():
+        doc_per = DocumentPer.objects.filter(owner=email)
     template = loader.get_template('supplierInsidePer.html')
     if request.method == 'POST':
         form = SupplierForm(request.POST, request.FILES)
@@ -44,6 +59,7 @@ def inside_per(request, id):
             obj = form.save(commit=False)
             obj.owner = supplier_p.email
             form.save()
+            doc_per = DocumentPer.objects.filter(owner=email)
     else:
         form = SupplierForm()
     context = {

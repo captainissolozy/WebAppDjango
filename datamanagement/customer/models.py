@@ -27,6 +27,6 @@ class DocumentOrg(models.Model):
 
 
 class DocumentPer(models.Model):
-    CustomersPer = models.ForeignKey(CustomersPer, on_delete=models.CASCADE)
+    owner = models.CharField(max_length=255)
     doc_name = models.CharField(max_length=255)
-    path = models.CharField(max_length=255)
+    path = models.ImageField(upload_to='images_cus/')

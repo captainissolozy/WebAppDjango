@@ -23,10 +23,10 @@ class SuppliersOrg(models.Model):
 class DocumentOrg(models.Model):
     owner = models.CharField(max_length=255)
     doc_name = models.CharField(max_length=255)
-    path = models.ImageField(upload_to='images/')
+    path = models.ImageField(upload_to='images_sup/')
 
 
 class DocumentPer(models.Model):
     owner = models.CharField(max_length=255)
     doc_name = models.CharField(max_length=255)
-    path = models.ImageField(upload_to='images/')
+    path = models.ImageField(upload_to='images_sup/')
