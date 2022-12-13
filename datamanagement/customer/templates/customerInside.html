@@ -1,29 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en_us">
 <head>
     <meta charset="UTF-8">
-    <title>document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Customer </title>
 </head>
-<h2>Type: Organization</h2>
-<p>ชื่อบริษัท : {{ customer_o.name }}</p>
-<p>เลขผู้เสียภาษี : {{ customer_o.taxpayer_num }} {{ supplier_p.surname }}</p>
-<p>ทุนจดทะเบียน : {{ customer_o.registered_capital }}</p>
-<p>เบอร์โทรติดต่อ : {{ customer_o.tel }}</p>
-<p>อีเมลล์ : {{ customer_o.email }}</p>
-<p>address : {{ customer_o.address }}</p>
-<br>
-{% for x in doc_per %}
-<tr>
-<td></td>
-    <br>
-    <td>{{ x.doc_name }}</td>
-    <td><img src="/media/{{ x.path }}" alt="connect" style="max-height:150px"></td><br>
-<td></td>
-</tr>
-{% endfor %}
-<br>
-<form method = "post" enctype="multipart/form-data" action="">
-        {% csrf_token %}
-        {{ form.as_p }}
-<button type="submit">Upload</button>
-</form>
+<body>
+    <!-- nav bar -->
+    <nav class="navbar sticky-top navbar-expand-lg ">
+        <div class="container-fluid d-flex justify-content-between mb-5 " style="background-color: #AEAEAE;">
+            <a class="navbar-brand text-dark fs-4 fw-bold" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/2015/2015058.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+                Name Website :
+            </a>
+            <div class="nav-item dropdown" >
+                <i class="bi bi-list nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style='font-size:40px;color: black;'></i>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #CDCDCD;">
+                    <li><a class="dropdown-item" href="/supplier">Supplier</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Customer</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3 ">
+        <!-- code supplier บุคคล -->
+        <div class="d-flex justify-content-start mb-5">
+            <div class="col-5">
+                <h2>Type: Organization</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-start">
+            <div class="col-3">
+                <h5 class="fw-bold">ชื่อองค์กร : </h5>
+            </div>
+            <div class="col-5 text-break text-wrap" >
+                <h5 style="background-color: #E2E2E2; padding: 10px;">
+                    {{ customer_o.name }}
+                </h5>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-3">
+                <h5 class="fw-bold">เลขผู้เสียภาษี : </h5>
+            </div>
+            <div class="col-5 text-break text-wrap" >
+                <h5 style="background-color: #E2E2E2; padding: 10px;">
+                    {{ customer_o.taxpayer_num }}
+                </h5>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-3">
+                <h5 class="fw-bold">ที่อยู่ : </h5>
+            </div>
+            <div class="col-5 text-break text-wrap" >
+                <h5 style="background-color: #E2E2E2; padding: 10px;">
+                    {{ customer_o.address }}
+                </h5>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-3">
+                <h5 class="fw-bold">ทุนจดทะเบียน : </h5>
+            </div>
+            <div class="col-5 text-break text-wrap" >
+                <h5 style="background-color: #E2E2E2; padding: 10px;">
+                    {{ customer_o.registered_capital }}
+                </h5>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-3">
+                <h5 class="fw-bold">เบอร์โทรติดต่อ : </h5>
+            </div>
+            <div class="col-5 text-break text-wrap" >
+                <h5 style="background-color: #E2E2E2; padding: 10px;">
+                    {{ customer_o.tel }}
+                </h5>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+            <!-- card supplier บุคคล-->
+        <div class="card text-dark  shadow p-3 mb-5  rounded mt-4" style="background-color: #f8f9fa;">
+            <div class="card-body " >
+
+              <div class="table-responsive px-4 py-4">
+                  <table class="table table-bordered table-hover text-break" style="background-color: #D7D7D7; ">
+                      <thead>
+                          <tr class="text-center">
+                            <th>No</th>
+                            <th>Description</th>
+                            <th>Document</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for x in doc_per %}
+                          <tr>
+                            <td class="col-1 text-center">{{ x.id }}</td>
+                            <td class="col-5 ">{{ x.doc_name }}</td>
+                            <td class="col-5">
+                                <a href="">
+
+                                    <img src="/media/{{ x.path }}" alt="" width="50" height="40" class="mx-auto d-block">
+                                </a>
+                            </td>
+                          </tr>
+                        {% endfor %}
+                        </tbody>
+                  </table>
+                </div>
+
+                <div class="row px-4 py-2">
+                    <h5 class="fw-bold px-4 pb-3">เพิ่มเอกสาร</h5>
+                </div>
+
+                <div class="d-flex justify-content-center px-5 py-4 ">
+                    <div class="col-6  px-4">
+                        <form method = "post" enctype="multipart/form-data" action="">
+                            {% csrf_token %}
+                                {{ form.as_p }}
+                            <button type="submit">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
+

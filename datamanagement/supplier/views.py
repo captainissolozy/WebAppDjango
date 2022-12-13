@@ -128,3 +128,4 @@ def add_supplierP(request):
                                   email=email, tel=tel, address=address)
         supplier_p.save()
     return HttpResponseRedirect(reverse('supplier:index'))
+

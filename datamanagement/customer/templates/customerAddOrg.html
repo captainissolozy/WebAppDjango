@@ -1,80 +1,83 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en_us">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Organization</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <title>Add Organization customer</title>
 </head>
 <body>
-    <div class="container">
-
-        <div class="row" style="margin-top: 20px;">
-                <div class="col-6">
-                    <h1>Customer : องค์กร</h1>
-                </div>
-
+    <!-- nav bar -->
+    <nav class="navbar sticky-top navbar-expand-lg ">
+        <div class="container-fluid d-flex justify-content-between mb-5 " style="background-color: #D590FF;">
+            <a class="navbar-brand text-dark fs-4 fw-bold" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/2015/2015058.png" alt="" width="50" height="40" class="d-inline-block align-text-top">
+                Name Website :
+            </a>
+            <div class="nav-item dropdown" >
+                <i class="bi bi-list nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style='font-size:40px;color: black;'></i>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #FFC9F7;">
+                    <li><a class="dropdown-item" href="#">Supplier</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Customer</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
         </div>
-        {% include 'messages.html' %}
-        <form action="add_customerO/" method="post">
-        {% csrf_token %}
-        <div class="row"style="margin-top: 20px;">
-                <div class="col-6">
-                    name
-                    <div>
-                        <input name="name" placeholder="" style="width: 300px;border-radius: 25px;border: 2px solid;" class="mt-0">
+    </nav>
+
+    <div class="container mt-3">
+        <!-- code supplier บริษัท -->
+            <div class="d-flex justify-content-start">
+                <div class="col-5">
+                    <h2>Customer : องค์กร</h2>
+                </div>
+            </div>
+            <!-- card supplier บริษัท-->
+            <div class="card text-dark  shadow p-3 mb-5  rounded mt-4" style="background-color: #f8f9fa;">
+                <div class="card-body " >
+                    <div class="row px-4 py-4">
+                        {% include 'messages.html' %}
+                        <form action="add_customerO/" method="post">
+                        {% csrf_token %}
+                        <div class="col-6">
+                            <label class="form-label">ชื่อบริษัท</label>
+                            <input name="name" type="text" class="form-control mb-4 " placeholder="" style="background-color: #dee2e6;">
+                            <label class="form-label">ทุนจดทะเบียน</label>
+                            <input name="registered_capital" type="number" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+                            <label class="form-label">เบอร์โทร</label>
+                            <input name="tel" type="number" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">เลขผู้เสียภาษี</label>
+                            <input name="taxpayer_num" type="number" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+                            <label class="form-label">ชื่อผู้ติดต่อ</label>
+                            <input name="email" type="text" class="form-control mb-4" placeholder="" style="background-color: #dee2e6;">
+                        </div>
+                        <div class="col">
+                            <label class="form-label">ที่อยู่</label>
+                            <textarea name="address" class="form-control mb-4" id="txt_area" rows="3" style="background-color: #dee2e6;"></textarea>
+                        </div>
+                        <!-- ปุ่มแบบเต็ม -->
+                        <div class="row justify-content-end col-12 mx-auto mt-4">
+                                <input type="submit" value="Submit" name="addPer">
+                        </div>
+                        </form>
+                    <!-- ปุ่มแบบชิดขวา -->
+                        <!-- <div class="row justify-content-end mt-4  d-grid gap-2">
+                            <button class="btn btn-info fw-bold" type="button">Add</button>
+                        </div> -->
                     </div>
                 </div>
-                <div class="col-6">
-                    email
-                    <div>
-                        <input name="email" placeholder="" style="width: 300px;border-radius: 25px;border: 2px solid;" class="mt-0">
-                    </div>
-                </div>
-        </div>
-        <div class="row"style="margin-top: 20px;">
-            <div class="col-6">
-                taxpayer_num
-                <div>
-                    <input name="taxpayer_num" placeholder="" style="width: 300px;border-radius: 25px;border: 2px solid;" class="mt-0">
-                </div>
             </div>
-            <div class="col-6">
-                registered_capital
-                <div>
-                    <input name="registered_capital" placeholder="" style="width: 300px;border-radius: 25px;border: 2px solid;" class="mt-0">
-                </div>
-            </div>
-        </div>
-        <div class="row"style="margin-top: 20px;">
-            <div class="col-6">
-                Tel.
-                <div>
-                    <input name="tel" placeholder="" style="width: 300px;border-radius: 25px;border: 2px solid;" class="mt-0">
-                </div>
-            </div>
-        </div>
-        <div class="row"style="margin-top: 20px;">
-            <div class="col-6">
-                address
-                <div>
-                    <label>
-                        <textarea name="address" style="width: 100%;"></textarea>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="row"style="margin-top: 20px;">
-            <div class="col-12">
-                <input type="submit" value="Submit" name="addPer" style="opacity:1; background-color:aqua;border-radius: 12px;">
-            </div>
-        </div>
-        </form>
     </div>
-    </div>
+
 </body>
 </html>
+

@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="644029c1-2736-4fd2-a40d-af5433027e9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/media/images_cus/rgbimage_SkM1Urb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images_sup/OpenCV_dRZI7mm.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/templates/customerAddOrg.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customerAddOrg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/templates/customerAddPersonal.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customerAddPersonal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/templates/customerIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customerIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/templates/customerInside.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customerInside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/templates/customerInsidePer.html" beforeDir="false" afterPath="$PROJECT_DIR$/customer/templates/customerInsidePer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier/templates/supplierAddOrg.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierAddOrg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier/templates/supplierAddPersonal.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierAddPersonal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supplier/templates/supplierIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier/templates/supplierInside.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierInside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier/templates/supplierInsidePer.html" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/templates/supplierInsidePer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplier/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/supplier/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +124,7 @@
       <workItem from="1670554791545" duration="719000" />
       <workItem from="1670733448839" duration="17912000" />
       <workItem from="1670820793501" duration="9070000" />
+      <workItem from="1670914050741" duration="5274000" />
     </task>
     <servers />
   </component>
